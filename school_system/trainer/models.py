@@ -8,7 +8,7 @@ class Trainer(models.Model):
     first_name=models.CharField(max_length=12,default=None)
     last_name=models.CharField(max_length=20,default=None)
     course=models.CharField(max_length=20,default=None)
-    email=models.EmailField(default=None)
+    email=models.EmailField(default=0)
     national_id=models.CharField(max_length=15,default=None)
     contract=models.FileField(upload_to="files/",default=None)
     resume=models.FileField(upload_to="files/",default=None)

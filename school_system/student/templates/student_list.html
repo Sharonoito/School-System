@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+th{
+    color: blueviolet;
+   
+}
+h1{
+    color: blueviolet;  
+    text-align: center;
+}
+table{
+   margin-left: auto;
+   margin-right: auto;
+}
+footer{     
+    text-align: center;
+    }
+#pic{
+    width: 20%;
+   
+    }
+#button{
+    background-color:purple;
+    border: transparent;
+    padding: 10px;
+    border-radius: 5px;
+            
+    }
+#button a{
+    text-decoration: none;
+    color: blanchedalmond;
+        }
+    </style>
+    <table>
+        <h1>Students List</h1>
+        <tr>
+            <th>Profile</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Phonenumber</th>
+            <th>Nationality</th>
+            <th>medical_record</th>  
+            <th>Edit</th>  
+            <th>Profile</th> 
+            <th>Delete</th> 
+
+        </tr>
+
+    {%for student in students%}
+    <tr>
+        {% if student.student_image%}
+        <td><img id="pic" src= "{{student.student_image.url}}"></td>
+                {% endif %}
+        <td>{{student.first_name}}</td>
+        <td>{{student.last_name}}</td>
+        <td>{{student.age}}</td>
+        <td>{{student.student_phonenumber}}</td>
+        <td>{{student.nationality}}</td>
+        <td><button id="button"><a href="{{student.medical_record.url}}" download="{{student.medical_record.url}}" >Download</a></button></td> 
+        <td><a href="{%url 'edit_student' id=student.id%}">Edit</a></td>
+        <td><a href="{%url 'student_profile' id=student.id%}">Profile</a></td>
+        <td><a href="{%url 'delete_student' id=student.id%}">Delete</a></td>
+
+    </tr>    
+      {%endfor%}
+    </table>
+    <footer>
+        <p>&copy;Codehive2021</p>
+    </footer>
+
+</body>
+</html>

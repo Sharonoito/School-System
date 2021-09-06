@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+            background-color:purple; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            font-size: 20px;
+            background: linear-gradient(135deg,#71b7e6,#9b59b6); 
+        }
+        form{
+            max-width: 700px;
+            width: 100%;
+            background: whitesmoke;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow:0px 0px 20px gray ;
+            margin-bottom: 20px;
+            margin: 0 auto;
+        }
+        h1{
+            font-size: 30px;
+            font-weight: 500;
+            position: relative;
+            color: purple;
+        }
+         
+         input{
+            width: 90%;       
+            padding: 15px;
+            font-size: 18px;    
+            /* border: transparent;
+            border-bottom: 1px solid black;   */
+        } 
+        select{
+            padding: 1% 22%; 
+            margin-left: 14%; 
+            margin-bottom: 1%;     
+        }
+        button{
+            background-color: purple;
+            color: whitesmoke;
+            margin-left: 35%; 
+            padding: 2% 10%; 
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        footer{     
+        text-align: center;
+        }
+
+    </style>  
+      
+    <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+
+          <!-- <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fakirachix.com%2F&psig=AOvVaw32TDvZH4A0l6-84cU5Gqto&ust=1630782564603000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKC3odDA4_ICFQAAAAAdAAAAABAD"></img>  -->
+           
+        <h1>Student Registration Form</h1>
+      
+        {{form.as_p}}
+        <button>Submit</button>
+    </form>   
+
+    <footer>
+            <p>&copy;Codehive2021</p>
+        </footer>
+    
+</body>
+</html>
