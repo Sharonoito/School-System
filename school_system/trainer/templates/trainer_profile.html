@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +8,74 @@
     <title>Document</title>
 </head>
 <body>
-    <h2><img id="pic" src= "{{trainer.trainer_image.url}}"></h2>
-    <h2>{{trainer.first_name}}<h2>
-    <h2>{{trainer.last_name}}<h2>
-    <h2>{{trainer.gender}}<h2>
+    <style> 
 
+
+section{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 500px;
+    width: 800px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    background-color: white;
+   
+ }
+ 
+ .content{
+    line-height: 1.5em;
+    font-size: 18px;
+    text-align: justify;
+    margin-left: 10%;
+    margin-top: 10%;
+    color: purple;
+    height: 50%;
+    width: 50%;
+  
+ }
+ h1{
+    font-size:38px;
+    text-align:center;
+    color: black;
+
+
+ }
+ .card{
+    color: whitesmoke;
+ }
+
+ #pic{
+    height: 100%;
+    width: 120%;
+ }
+  </style>
+
+<img src={% static 'backgrd.jpg' %} style="height: 680px; width: 1430px;" >
+
+
+      <div className="home-cards">
+         <div class = "card">
+            <div class="about-content"> 
+         <section class="skewbox">
+          <h2><img id="pic" src= "{{trainer.trainer_image.url}}"></h2>
+          <div class="content">
+           
+                <h2>{{trainer.first_name}}<h2>
+                <h2>{{trainer.last_name}}<h2>
+                <h2>{{trainer.course}}<h2>
+               <h2>{{trainer.email}}<h2>
+               <h2>{{trainer.company}}<h2>
+                    
+
+           </div>
+         
+        </section>
+       
+</div>
+</div>
+</div>
 
 </body>
 </html>

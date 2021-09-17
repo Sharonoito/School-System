@@ -49,3 +49,4 @@ def delete_course(request,id):
     course=Course.objects.get(id=id)
     course.delete()
     return redirect("course_list")     
+    

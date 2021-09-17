@@ -16,6 +16,7 @@ Including another URLconf
 # from school_system.event import urls
 from django.contrib import admin
 from django.urls import path,include
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 # from django.urls.conf import include
 from django.conf import settings
 from django.conf.urls.static import static
@@ -27,6 +28,8 @@ urlpatterns = [
     path("trainer/",include("trainer.urls")),
     path("course/",include("course.urls")),
     path("event/",include("event.urls")),
+    path("api/",include("api.urls")),
+
   
 ]
 

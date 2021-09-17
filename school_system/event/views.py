@@ -87,16 +87,16 @@ def edit_event(request,id):
 
     else:
         form=EventRegistrationForm(instance=event)
-    return render (request,"event_edit.html",{"form":form})
+    return render (request,"Calendar/edit_event.html",{"form":form})
 
 
 def event_profile(request,id):
     event=Event.objects.get(id=id)
-    return render(request,"event_profile.html",{"event":event})            
+    return render(request,"Calendar/event_profile.html",{"event":event})            
 
 
 def delete_event(request,id):
     event=Event.objects.get(id=id)
     event.delete()
-    return redirect("event_list")            
+    return redirect("Calendar/event_list")            
 
