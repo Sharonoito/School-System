@@ -1,0 +1,14 @@
+p{
+    color: grey;
+}
+hr{
+    background: red;
+    height: 10px;
+    
+}
+h1,h2,h3{
+    color: blue;
+}
+blockquote{
+    font-style: italic;
+}

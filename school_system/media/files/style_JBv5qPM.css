@@ -1,0 +1,21 @@
+#head{
+    width:400px;
+    padding:10px;
+    border:  2px solid #eee;
+    margin:20px;
+    color:blue;
+
+} 
+
+h1,h2,h4{
+ 
+   color: blue;
+}
+div{
+    background-color: lightgrey;
+    width:350px;
+    border: 15px solid blueviolet;
+    padding:50px;
+    margin:20px;
+}
+
