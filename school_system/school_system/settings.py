@@ -1,4 +1,5 @@
 import django_heroku
+
 """
 Django settings for school_system project.
 
@@ -34,7 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -86,8 +87,19 @@ WSGI_APPLICATION = 'school_system.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME':'my_schoolsystem',
+
+        'USER': 'sharonoito',
+
+        'PASSWORD': 'oito3700',
+
+        'HOST': 'localhost',
+
+        'PORT': '',
+       
     }
 }
 

@@ -65,7 +65,7 @@ footer{
 
         </tr>
 
-    {%for student in students%}
+    {% for student in students %}
     <tr>
         {% if student.student_image%}
         <td><img id="pic" src= "{{student.student_image.url}}"></td>

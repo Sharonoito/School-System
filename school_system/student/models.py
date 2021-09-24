@@ -18,7 +18,6 @@ class Student(models.Model):
     course=models.CharField(max_length=30,null=True,blank=True)
     admission_date=models.DateField(auto_now=True, null=True)
     student_image=models.ImageField(upload_to="images/",default=None,blank=True,null=True)
-    room_no=models.CharField(max_length=15,null=True,blank=True)
     medical_report=models.FileField(upload_to="files/",default=None,blank=True,null=True)
     student_phonenumber=models.CharField(max_length=15,default=None,blank=True,null=True)
     class_name=models.CharField(max_length=10,default=None,blank=True,null=True)
