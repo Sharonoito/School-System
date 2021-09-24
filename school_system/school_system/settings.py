@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-$(h1e(!90^xo@5uni47zt9%fgc4*18_+-*dmo)k%lr0n73!r$z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['sharon-schoolsystem.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','sharon-schoolsystem.herokuapp.com']
 
 
 # Application definition
@@ -98,7 +98,7 @@ DATABASES = {
 
         'HOST': 'localhost',
 
-        'PORT': '',
+        'PORT': '5432',
        
     }
 }
