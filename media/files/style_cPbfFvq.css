@@ -1,0 +1,19 @@
+body{
+    
+    background-image:url(pistures/01-Real-Estate-Essentials-5-Luxury-Backyard-Landscaping-Ideas-to-Improve-Your-Property.jpg);
+    
+    background-size: cover;
+    }
+    h1{ 
+        color :crimson;
+        background-color: whitesmoke;
+        text-align: center;
+    }
+    .words{
+        color: thistle;
+    }
+    img{
+        float:right;
+        width: 250px;
+        height: 200px;
+    }

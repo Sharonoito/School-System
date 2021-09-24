@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event List</title>
+
+</head>
+<body>
+    <style>
+        table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+th{
+    color: white;
+    background-color: purple;
+   
+}
+h1{
+    color: purple;  
+    text-align: center;
+}
+table{
+   margin-left: auto;
+   margin-right: auto;
+}
+footer{     
+    text-align: center;
+    }
+#pic{
+    width:30%;
+    }
+#button{
+    background-color:purple;
+    border: transparent;
+    padding: 10px;
+    border-radius: 5px;
+            
+    }
+#button a{
+    text-decoration: none;
+    color: blanchedalmond;
+        }
+    </style>
+    <table>
+       <h1>Events List</h1>
+
+        <tr>
+            <th>Event Name</th>
+            <th>Start Time</th>
+            <th>End Time</th> 
+            <th>Venue</th>
+            <th>Link</th>
+            <th>Description</th>
+            <th>Edit</th>  
+            <th>Profile</th> 
+            <th>Delete</th> 
+
+        </tr>
+
+        {% for event in events%}
+            <tr>
+                {% if event.event_image%}                
+                <td><img id="pic" src= "{{event.event_image.url}}"></td> 
+                {% endif %}
+
+                <td>{{event.event_name}}</td>
+                <td>{{event.start_time}}</td>
+                <td>{{event.end_time}}</td>
+                <td>{{event.venue}}</td>
+                <td>{{event.event_link}}</td>
+                <td>{{event.description}}</td>
+                <td><a href="{%url 'edit_event' id=event.id %}">Event</a></td>
+                <td><a href="{%url 'event_profile' id=event.id%}">Profile</a></td>
+                <td><a href="{%url 'delete_event' id=event.id%}">Delete</a></td>
+         
+
+            </tr>
+
+            {%endfor%}
+    </table>
+    <footer>
+        <p>&copy;Codehive2021</p>
+    </footer>
+    
+</body>
+</html>
+
